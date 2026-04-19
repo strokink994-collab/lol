@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор дробей 1–10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Калькулятор дробей</h1>
+            <p>Числа от 1 до 10, все основные операции</p>
+        </header>
+
+        <main class="calculator">
+            <!-- Первая дробь -->
+            <div class="fraction-group">
+                <label>Дробь 1:</label>
+                <div class="fraction">
+                    <input type="number" id="num1" min="1" max="10" placeholder="Числитель" required>
+                    <span class="fraction-divider">/</span>
+                    <input type="number" id="den1" min="1" max="10" placeholder="Знаменатель" required>
+                </div>
+            </div>
+
+            <!-- Операция -->
+            <div class="operation-group">
+                <select id="operation" aria-label="Операция">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">×</option>
+                    <option value="/">÷</option>
+                </select>
+            </div>
+
+            <!-- Вторая дробь -->
+            <div class="fraction-group">
+                <label>Дробь 2:</label>
+                <div class="fraction">
+                    <input type="number" id="num2" min="1" max="10" placeholder="Числитель" required>
+                    <span class="fraction-divider">/</span>
+                    <input type="number" id="den2" min="1" max="10" placeholder="Знаменатель" required>
+                </div>
+            </div>
+
+            <!-- Кнопка и результат -->
+            <button type="button" onclick="calculate()" id="calculateBtn">Вычислить</button>
+            <div id="result" class="result">Результат: _</div>
+        </main>
+
+        <footer>
+            <p>Работает на любых устройствах</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
