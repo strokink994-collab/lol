@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.fraction-group {
+    margin-bottom: 20px;
+}
+
+.fraction-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.fraction {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.fraction input {
+    width: 80px;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fraction input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.fraction-divider {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+}
+
+.operation-group {
+    text-align: center;
+    margin: 25px 0;
+}
+
+#operation {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 2px solid #667eea;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+#calculateBtn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#calculateBtn:hover {
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .fraction input {
+        width: 70px;
+        height: 45px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #operation {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    #calculateBtn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .result {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
